@@ -3,9 +3,9 @@
     font-family: 'Open Sans', sans-serif;
     --text-primary: #ececec;
     --text-secondary: #b6b6b6;
-    --bg-primary: #141418;
+    --bg-primary: rgb(20, 21, 23);
     --bg-secondary: rgb(26, 27, 30);
-    --bg-third: hsl(240, 9%, 20%);
+    --bg-third: #59057B;
 }
 
 a {
@@ -33,6 +33,11 @@ body::-webkit-scrollbar-thumb {
     background-color: var(--text-primary);
 }
 
+.test {
+    background-color: var(--bg-third);
+    height: 200px;
+}
+
 main {
     max-width: 1200px;
 	margin-left: auto;
@@ -54,7 +59,7 @@ footer {
 nav {
     height: 5.25rem;
     position: relative;
-    background-color: var(--bg-primary);
+    background-color: var(--bg-secondary);
     z-index: 100;
     box-sizing: border-box;
     border-bottom: 1px solid rgb(44, 46, 51);
