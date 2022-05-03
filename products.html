@@ -12,6 +12,13 @@
     />
     <link rel="stylesheet" href="styles/style.css" />
     <title>Products</title>
+    <style>
+      .screenshot {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+      }
+    </style>
   </head>
   <body>
     <nav class="navbar">
@@ -37,7 +44,7 @@
       <section>
         <h2>Products</h2>
         <h3>Resonators</h3>
-        <img src="images/Resonator1.png" alt="Resonators screenshot" />
+        <img class="screenshot" src="images/Resonator1.png" alt="Resonators screenshot" />
         <p>Color bass time.</p>
         <audio controls>
           <source src="content/resonatordemo.flac" type="audio/flac" />

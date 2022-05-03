@@ -250,11 +250,16 @@ nav .nav-area {
     nav .nav-area .links .nav-primary {
         margin-right: 0;
     }
-    /* nav .nav-area .links .nav-secondary {
-        margin-top: 1rem;
-    } */
 
     nav .logo {
         display: none;
+    }
+
+    .transition-wave svg {
+        width: 1000px;
+    }
+
+    .spacer {
+        width: 1000px;
     }
 }
