@@ -44,8 +44,7 @@ header {
     flex-direction: column;
     display: flex;
     align-items: flex-start;
-    justify-content: flex-start;
-    
+    justify-content: flex-start;  
 }
 
 .text-bigger {
@@ -261,5 +260,9 @@ nav .nav-area {
 
     .spacer {
         width: 1000px;
+    }
+
+    header {
+        align-items: center;
     }
 }
