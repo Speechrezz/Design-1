@@ -256,10 +256,12 @@ nav .nav-area {
 
     .transition-wave svg {
         width: 1000px;
+        overflow: hidden;
     }
 
     .spacer {
         width: 1000px;
+        overflow: hidden;
     }
 
     header {
