@@ -267,6 +267,10 @@ nav .nav-area {
     header {
         align-items: center;
     }
+
+    .blurb {
+        text-align: center;
+    }
 }
 
 @media screen and (max-width: 500px) {
