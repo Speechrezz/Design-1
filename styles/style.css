@@ -154,6 +154,7 @@ nav {
 }
 
 nav .logo {
+    font-family: 'Roboto', sans-serif;
 	height: 100%;
 	display: flex;
 	align-items: center;
@@ -166,6 +167,7 @@ nav .logo {
 }
 
 nav .nav-area {
+    font-family: 'Roboto', sans-serif;
     max-width: 960px;
     display: flex;
     justify-content: space-between;
@@ -201,6 +203,7 @@ nav .nav-area {
 	font-size: 0.75rem;
 	text-transform: uppercase;
 	transition: all 0.2s ease;
+    line-height: 1.55;
 }
 
 .nav-secondary .link:hover {
@@ -209,11 +212,13 @@ nav .nav-area {
 }
 
 .links .nav-primary {
+    font-size: 0.875rem;
 	display: flex;
 	box-sizing: border-box;
 	align-items: center;
 	justify-content: flex-end;
 	margin-right: -12px;
+    line-height: 1;
 }
 
 .nav-primary .link {
