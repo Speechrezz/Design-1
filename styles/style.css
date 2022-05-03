@@ -259,12 +259,18 @@ nav .nav-area {
         overflow: hidden;
     }
 
-    .spacer {
+    /* .spacer {
         width: 1000px;
         overflow: hidden;
-    }
+    } */
 
     header {
         align-items: center;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    :root {
+        font-size: 12px;
     }
 }
