@@ -3,13 +3,115 @@
     font-family: 'Open Sans', sans-serif;
     --text-primary: #ececec;
     --text-secondary: #b6b6b6;
+    --text-third: hsl(214, 100%, 75%);
     --bg-primary: rgb(20, 21, 23);
     --bg-secondary: rgb(26, 27, 30);
-    --bg-third: #59057B;
+    --bg-third: #C62368;
+    /* --bg-third: #59057B; */
+}
+
+main {
+    background-color: var(--bg-primary);
+}
+
+section {
+    max-width: 1200px;
+	margin-left: auto;
+	margin-right: auto;
+    padding: 1rem;
+    position: relative;
 }
 
 a {
-    color: hsl(214, 100%, 70%);
+    color: var(--text-third);
+}
+
+.blurb {
+    margin-bottom: 1rem;
+}
+
+.bg-secondary {
+    background-color: var(--bg-secondary);
+    width: 100%;
+}
+
+.bg-third {
+    background-color: var(--bg-third);
+    width: 100%;
+}
+
+header {
+    flex-direction: column;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    
+}
+
+.text-bigger {
+    font-size: 1.5rem;
+}
+
+.spacer {
+    aspect-ratio: 960/200;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.layer1 {
+    background-image: url("./../content/layer1.svg");
+}
+
+h2 {
+    font-size: 3rem;
+    font-weight: 300;
+}
+
+header div {
+    margin-top: 2rem;
+    max-width: 50%;
+    font-size: 1.5rem;
+}
+
+header div p {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    width: 100%;
+    text-align: center;
+    font-size: 4rem;
+    font-weight: 300;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: var(--text-third);
+}
+
+.transition-wave {
+    position: relative;
+    bottom: 0px;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.transition-wave svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 100px;
+}
+
+.transition-wave .shape-fill2 {
+    fill: var(--bg-secondary);
+}
+
+.transition-wave .shape-fill1 {
+    fill: var(--bg-primary);
 }
 
 body {
@@ -33,27 +135,13 @@ body::-webkit-scrollbar-thumb {
     background-color: var(--text-primary);
 }
 
-.test {
-    background-color: var(--bg-third);
-    height: 200px;
-}
-
-main {
-    max-width: 1200px;
-	margin-left: auto;
-	margin-right: auto;
-    padding: 1rem;
-    background-color: var(--bg-primary);
-}
-
 p, li {
     color: var(--text-secondary);
 }
 
 footer {
-    font-size: 0.8rem;
     text-align: center;
-    margin-top: 1rem;
+    margin-top: 3rem;
 }
 
 nav {
