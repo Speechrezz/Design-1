@@ -241,7 +241,8 @@ nav .logo {
 
 @media screen and (max-width: 960px) {
     nav {
-        font-size: max(24px, 5vw); 
+        font-size: 5vw; 
+        height: auto;
     }
 
     nav .nav-area {
@@ -257,6 +258,10 @@ nav .logo {
     }
 
     nav .logo {
+        display: none;
+    }
+
+    .links .nav-secondary{
         display: none;
     }
 
