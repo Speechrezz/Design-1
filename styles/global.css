@@ -5,17 +5,30 @@
     --text-secondary: hsl(0, 0%, 60%);
     --text-third: hsl(214, 100%, 75%);
     --bg-primary: rgb(20, 21, 23);
-    --bg-secondary: rgb(26, 27, 30);
+    --bg-secondary: hsl(230, 8%, 14%);
     --bg-third: #C62368;
     /* --bg-third: #59057B; */
+    --bg-navbar: hsl(225, 7%, 11%);    
 }
+
+/* ===============================================================
+Main stylings */
 
 main {
     background-color: var(--bg-primary);
 }
 
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
 section {
-    max-width: 1200px;
+    max-width: 1000px;
 	margin-left: auto;
 	margin-right: auto;
     padding: 1rem;
@@ -26,8 +39,50 @@ a {
     color: var(--text-third);
 }
 
-.blurb {
-    margin-bottom: 1rem;
+h1 {
+    width: 100%;
+    text-align: center;
+    font-size: 4rem;
+    font-weight: 300;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: var(--text-third);
+}
+
+h2 {
+    font-size: 3rem;
+    font-weight: 300;
+}
+
+p, li {
+    color: var(--text-secondary);
+}
+
+footer {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+/* ===============================================================
+Scroll-bar */
+
+body::-webkit-scrollbar {
+    width: 0.5em;
+}
+
+body::-webkit-scrollbar-track {
+    background-color: var(--bg-secondary);
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--text-primary);
+}
+
+/* ===============================================================
+Helper classes */
+
+.text-bigger {
+    font-size: 1.25rem;
 }
 
 .bg-secondary {
@@ -40,54 +95,8 @@ a {
     width: 100%;
 }
 
-header {
-    flex-direction: column;
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;  
-}
-
-.text-bigger {
-    font-size: 1.5rem;
-}
-
-.spacer {
-    aspect-ratio: 960/200;
-    width: 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
-
-.layer1 {
-    background-image: url("./../content/layer1.svg");
-}
-
-h2 {
-    font-size: 3rem;
-    font-weight: 300;
-}
-
-header div {
-    margin-top: 2rem;
-    max-width: 500px;
-    font-size: 1.5rem;
-}
-
-header div p {
-    margin: 0;
-    padding: 0;
-}
-
-h1 {
-    width: 100%;
-    text-align: center;
-    font-size: 4rem;
-    font-weight: 300;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    color: var(--text-third);
-}
+/* ===============================================================
+Transitions */
 
 .transition-wave {
     position: relative;
@@ -113,57 +122,30 @@ h1 {
     fill: var(--bg-primary);
 }
 
-body {
-    background-color: var(--bg-primary);
-    color: var(--text-primary); /* Text color */
-    margin: 0;
-    padding: 0;
-    width: 100vw;
-    overflow-x: hidden;
+.spacer {
+    aspect-ratio: 960/200;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
-body::-webkit-scrollbar {
-    width: 0.5em;
+.layer1 {
+    background-image: url("./../content/layer1.svg");
 }
 
-body::-webkit-scrollbar-track {
-    background-color: var(--bg-secondary);
-}
-
-body::-webkit-scrollbar-thumb {
-    background-color: var(--text-primary);
-}
-
-p, li {
-    color: var(--text-secondary);
-}
-
-footer {
-    text-align: center;
-    margin-top: 3rem;
-}
+/* ===============================================================
+Nav-bar */
 
 nav {
-    height: 5.25rem;
+    font-size: 16px;
+    height: 5.25em; /* 84px */
     position: relative;
-    background-color: var(--bg-secondary);
+    background-color: var(--bg-navbar);
     z-index: 100;
     box-sizing: border-box;
     border-bottom: 1px solid rgb(44, 46, 51);
 	margin-bottom: 120px;
-}
-
-nav .logo {
-    font-family: 'Roboto', sans-serif;
-	height: 100%;
-	display: flex;
-	align-items: center;
-	justify-content: flex-start;
-	font-size: 1.5rem;
-	font-weight: bold;
-	color: var(--text-secondary);
-	text-decoration: none;
-	gap: 16px;
 }
 
 nav .nav-area {
@@ -180,6 +162,21 @@ nav .nav-area {
     height: 100%;
 }
 
+nav .logo {
+    font-family: 'Roboto', sans-serif;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	font-size: 1.5em;
+	font-weight: bold;
+	color: var(--text-secondary);
+	text-decoration: none;
+	gap: 16px;
+}
+
+/* Part of navbar where the links are */
+
 .nav-area .links {
 	padding-top: 20px;
 	display: flex;
@@ -189,30 +186,8 @@ nav .nav-area {
 	box-sizing: border-box;
 }
 
-.links .nav-secondary {
-	display: flex;
-	box-sizing: border-box;
-	align-items: center;
-	justify-content: flex-end;
-	gap: 16px;
-}
-
-.nav-secondary .link {
-	text-decoration: none;
-	color: rgb(144, 146, 150);
-	font-size: 0.75rem;
-	text-transform: uppercase;
-	transition: all 0.2s ease;
-    line-height: 1.55;
-}
-
-.nav-secondary .link:hover {
-	color: var(--text-primary);
-    text-decoration: underline;
-}
-
 .links .nav-primary {
-    font-size: 0.875rem;
+    font-size: 0.875em;
 	display: flex;
 	box-sizing: border-box;
 	align-items: center;
@@ -228,7 +203,7 @@ nav .nav-area {
     text-decoration: none;
     text-transform: uppercase;
     box-sizing: border-box;
-    padding: 0.5rem 1rem;
+    padding: 0.5em 1em;
     border-style: none none solid;
     border-color: currentcolor currentcolor transparent;
 }
@@ -242,7 +217,33 @@ nav .nav-area {
     text-decoration: none;
 }
 
+.links .nav-secondary {
+	display: flex;
+	box-sizing: border-box;
+	align-items: center;
+	justify-content: flex-end;
+	gap: 16px;
+}
+
+.nav-secondary .link {
+	text-decoration: none;
+	color: rgb(144, 146, 150);
+	font-size: 0.75em;
+	text-transform: uppercase;
+	transition: all 0.2s ease;
+    line-height: 1.55;
+}
+
+.nav-secondary .link:hover {
+	color: var(--text-primary);
+    text-decoration: underline;
+}
+
 @media screen and (max-width: 960px) {
+    nav {
+        font-size: max(24px, 5vw); 
+    }
+
     nav .nav-area {
         flex-direction: column;
         align-items: center;
@@ -262,19 +263,6 @@ nav .nav-area {
     .transition-wave svg {
         width: 1000px;
         overflow: hidden;
-    }
-
-    /* .spacer {
-        width: 1000px;
-        overflow: hidden;
-    } */
-
-    header {
-        align-items: center;
-    }
-
-    .blurb {
-        text-align: center;
     }
 }
 

@@ -1,0 +1,52 @@
+header {
+    flex-direction: column;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;  
+}
+
+header div {
+    margin-top: 2rem;
+    max-width: 500px;
+    font-size: 1.5rem;
+}
+
+header div.blurb {
+    margin-bottom: 1rem;
+}
+
+header div p {
+    margin: 0;
+    padding: 0;
+}
+
+@media screen and (max-width: 960px) {
+    nav .nav-area {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    nav .nav-area .links {
+        align-items: center;
+    }
+    nav .nav-area .links .nav-primary {
+        margin-right: 0;
+    }
+
+    nav .logo {
+        display: none;
+    }
+
+    .transition-wave svg {
+        width: 1000px;
+        overflow: hidden;
+    }
+
+    header {
+        align-items: center;
+    }
+
+    .blurb {
+        text-align: center;
+    }
+}
